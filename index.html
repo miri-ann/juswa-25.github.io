@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--  -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Differential Equation</title>
+        <link rel="icon" href="LOGO.png" type="image/x-icon">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<!--  -->
+
+<body>
+    
+<!-- Header -->
+    <div class="top-box">
+        <div class="name-wrapper">
+            <div class="centered-name">EMATH 213 - Differential Equations</div>
+        </div>
+        <a href="about.html"><button id="aboutButton" >About</button></a>
+    
+        <!-- Logo -->  
+        <a href="https://www.ctu.edu.ph/danao/" target="_blank">
+            <img src="LOGO.png" alt="Logo" class="logo">
+            </a>
+    </div>
+        
+    <!-- For the containers spaces and orientation -->
+    <div class="flex-container">
+        <!-- 1st container -->
+        <div class="container">
+            <!-- Growth and Decay Solver -->
+            <h1>Growth and Decay Solver</h1>
+            <form id="growthDecayForm">
+                <label for="initialValue">Initial Value (P<sub>0</sub>):</label>
+                <input type="number" id="initialValue" required>
+
+                <label for="finalValue">Final Value (P): (Leave empty to calculate)</label>
+                <input type="number" id="finalValue">
+
+                <label for="rate">Growth/Decay Rate (k): (Leave empty to calculate)</label>
+                <input type="number" id="rate" step="0.000001">
+
+                <label for="timeGrowth">Time (t):</label>
+                <input type="number" id="timeGrowth" required>
+
+                <button type="submit">Calculate</button>
+            </form>
+
+            <div id="GrowthDecayResult"></div>
+        </div>
+
+        <!-- 2nd container -->
+        <div class="container">
+            <!-- Newton's Law of Cooling/Heating -->
+            <h1>Cooling/Heating Solver</h1>
+            <form id="coolingHeatingForm">
+                <!-- Initial Temp -->
+                <label for="initialTemp">Initial Temperature (T<sub>0</sub>):</label>
+                <input type="number" id="initialTemp" required> 
+                <!-- Room Temp -->
+                <label for="roomTemp">Room Temperature (T<sub>s</sub>):</label>
+                <input type="number" id="roomTemp" required>
+                <!-- Final Temp  -->
+                <label for="finalTemp">Final Temperature (T): (Leave empty to calculate)</label>
+                <input type="number" id="finalTemp">
+
+                <label for="coolingRate">Cooling/Heating Rate (k): (Leave empty to calculate)</label>
+                <input type="number" id="coolingRate" step="0.000001">
+        
+                <label for="time">Time (t):</label>
+                <input type="number" id="time" required>
+
+                <button type="submit">Calculate</button>
+            </form>
+        
+            <div id="CoolingHeatingResult"></div>
+        </div>
+    
+
+    <!-- JAVA SCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
