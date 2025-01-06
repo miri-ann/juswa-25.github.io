@@ -27,55 +27,65 @@
         
     <!-- For the containers spaces and orientation -->
     <div class="flex-container">
-        <!-- 1st container -->
-        <div class="container">
-            <!-- Growth and Decay Solver -->
-            <h1>Growth and Decay Solver</h1>
-            <form id="growthDecayForm">
-                <label for="initialValue">Initial Value (P<sub>0</sub>):</label>
-                <input type="number" id="initialValue" required>
+       <!-- 1st container: Growth and Decay Solver -->
+<div class="container">
+    <h1>Growth and Decay Solver</h1>
+    <form id="growthDecayForm">
+        <label for="initialValue">Initial Value (P<sub>0</sub>):</label>
+        <input type="number" id="initialValue" required>
 
-                <label for="finalValue">Final Value (P): (Leave empty to calculate)</label>
-                <input type="number" id="finalValue">
+        <label for="P1">Intermediate Value (P<sub>1</sub>): (Optional)</label>
+        <input type="number" id="P1">
 
-                <label for="rate">Growth/Decay Rate (k): (Leave empty to calculate)</label>
-                <input type="number" id="rate" step="0.000001">
+        <label for="finalValue">Final Value (P): (Leave empty to calculate)</label>
+        <input type="number" id="finalValue">
 
-                <label for="timeGrowth">Time (t):</label>
-                <input type="number" id="timeGrowth" required>
+        <label for="rate">Growth/Decay Rate (k): (Leave empty to calculate)</label>
+        <input type="number" id="rate" step="0.000001">
 
-                <button type="submit">Calculate</button>
-            </form>
+        <label for="timeGrowth">Time (t):</label>
+        <input type="number" id="timeGrowth" required>
 
-            <div id="GrowthDecayResult"></div>
-        </div>
+        <label for="timeP1">Time for Intermediate Value (t<sub>1</sub>):</label>
+        <input type="number" id="timeP1">
 
-        <!-- 2nd container -->
-        <div class="container">
-            <!-- Newton's Law of Cooling/Heating -->
-            <h1>Cooling/Heating Solver</h1>
-            <form id="coolingHeatingForm">
-                <!-- Initial Temp -->
-                <label for="initialTemp">Initial Temperature (T<sub>0</sub>):</label>
-                <input type="number" id="initialTemp" required> 
-                <!-- Room Temp -->
-                <label for="roomTemp">Room Temperature (T<sub>s</sub>):</label>
-                <input type="number" id="roomTemp" required>
-                <!-- Final Temp  -->
-                <label for="finalTemp">Final Temperature (T): (Leave empty to calculate)</label>
-                <input type="number" id="finalTemp">
+        <button type="submit">Calculate</button>
+    </form>
 
-                <label for="coolingRate">Cooling/Heating Rate (k): (Leave empty to calculate)</label>
-                <input type="number" id="coolingRate" step="0.000001">
-        
-                <label for="time">Time (t):</label>
-                <input type="number" id="time" required>
+    <div id="GrowthDecayResult"></div>
+</div>
 
-                <button type="submit">Calculate</button>
-            </form>
-        
-            <div id="CoolingHeatingResult"></div>
-        </div>
+<!-- 2nd container: Cooling/Heating Solver -->
+<div class="container">
+    <h1>Cooling/Heating Solver</h1>
+    <form id="coolingHeatingForm">
+        <label for="initialTemp">Initial Temperature (T<sub>0</sub>):</label>
+        <input type="number" id="initialTemp" required>
+
+        <label for="T1">Intermediate Temperature (T<sub>1</sub>): (Optional)</label>
+        <input type="number" id="T1">
+
+        <label for="roomTemp">Room Temperature (T<sub>s</sub>):</label>
+        <input type="number" id="roomTemp" required>
+
+        <label for="finalTemp">Final Temperature (T): (Leave empty to calculate)</label>
+        <input type="number" id="finalTemp">
+
+        <label for="coolingRate">Cooling/Heating Rate (k): (Leave empty to calculate)</label>
+        <input type="number" id="coolingRate" step="0.000001">
+
+        <label for="time">Time (t):</label>
+        <input type="number" id="time" required>
+
+        <label for="timeT1">Time for Intermediate Temperature (t<sub>1</sub>):</label>
+        <input type="number" id="timeT1">
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    <div id="CoolingHeatingResult"></div>
+</div>
+
     
 
     <!-- JAVA SCRIPT -->
