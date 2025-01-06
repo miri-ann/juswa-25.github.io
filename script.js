@@ -7,6 +7,8 @@ document.getElementById('coolingHeatingForm').addEventListener('submit', functio
     const Ts = parseFloat(document.getElementById('roomTemp').value); // Room Temperature
     const finalTempInput = document.getElementById('finalTemp').value; // Final Temperature (optional)
     const t = parseFloat(document.getElementById('time').value); // Time
+    const T1Input = document.getElementById('T1').value; // Intermediate Temperature (optional)
+    const timeT1Input = document.getElementById('timeT1').value; // Time for T1
     const kInput = document.getElementById('coolingRate').value; // Cooling/Heating Rate (optional)
 
     // Validate required inputs
@@ -60,9 +62,11 @@ document.getElementById('growthDecayForm').addEventListener('submit', function (
 
     // Get input values
     const P0 = parseFloat(document.getElementById('initialValue').value); // Initial Value
+    const P1Input = document.getElementById('P1').value; // Intermediate Value (optional)
     const kInput = document.getElementById('rate').value; // Growth/Decay Rate (optional)
     const finalValueInput = document.getElementById('finalValue').value; // Final Value (optional)
     const t = parseFloat(document.getElementById('timeGrowth').value); // Time
+    const timeP1Input = document.getElementById('timeP1').value; // Time for P1
 
     // Validate required inputs
     if (isNaN(P0) || isNaN(t)) {
